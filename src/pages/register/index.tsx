@@ -1,5 +1,6 @@
 import React from 'react'
 import supabase from '../../helper/supabaseCliente';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [email, setEmail] = React.useState('');
@@ -47,6 +48,8 @@ const Index = () => {
         <input type='password' placeholder='Password' value={password} required onChange={handleChangePassword} />
         <button type='submit'> Criar conta </button>
       </form>
+      <span> Já possui uma conta? </span>
+      <Link to='/login'> Login </Link>
     </div>
   )
 }
